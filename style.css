@@ -1,0 +1,173 @@
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.dot { /* Bulatan di samping nama */
+    height: 15px;
+    width: 15px;
+    background-color: blue; /* Warna bulat */
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: transparent; /* Background transparan */
+    border-bottom: none; /* Garis tipis di bawah navbar */
+    padding: 10px 0; /* Padding atas bawah */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem; /* Ukuran nama lebih besar */
+    font-weight: bold;
+    margin-left: 20px; /* Tambahkan jarak ke kiri */
+}
+
+.navbar-brand small {
+    font-size: 0.9rem; /* Ukuran jabatan lebih kecil */
+    font-weight: normal;
+    margin-left: 10px; /* Jarak antara nama dan jabatan */
+    color: blue; /* Warna teks jabatan */
+}
+
+/* Navbar Styles */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    color: salmon; /* Warna teks hitam */
+    font-size: 1rem; /* Ukuran font link */
+    padding: 0 15px; /* Jarak antar link */
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 500; /* Sedikit tebal */
+    position: relative;
+}
+
+/* Garis pemisah antar link */
+.nav-link::after {
+    color: salmon; /* Warna garis */
+    position: absolute;
+    right: -10px; /* Posisi garis di kanan */
+    top: 0;
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: salmon; /* Warna biru saat hover */
+}
+
+/* Header Section */
+.header-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.header-section p.lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.header-section img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+/* Animasi */
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi untuk image */
+.header-section img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: slideInUp 1.5s ease-out;
+}
+
+/* Footer */
+.footer-follow {
+    font-weight: bold; /* Menebalkan teks */
+    font-size: 1.2rem; /* Mengatur ukuran font */
+    color: #000; /* Warna hitam */
+    margin-bottom: 10px; /* Jarak bawah */
+}
+
+.footer-follow:hover {
+    color: #333; /* Warna saat dihover */
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1); /* Animasi pada img sosmed */
+}
+
+/* Animasi */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi teks */
+.header-section h1,
+.header-section p.lead,
+.header-section p {
+    opacity: 0; /* Awalnya tidak terlihat */
+    animation: slideUp 1s ease-out forwards; /* Menjalankan animasi */
+}
+
+.header-section h1 {
+    animation-delay: 0.2s; /* Mulai setelah 0.2 detik */
+}
+
+.header-section p.lead {
+    animation-delay: 0.4s; /* Mulai setelah 0.4 detik */
+}
+
+.header-section p {
+    animation-delay: 0.6s; /* Mulai setelah 0.6 detik */
+}
